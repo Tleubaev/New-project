@@ -1,0 +1,21 @@
+Git
+
+Команды:
+
+git init - инициализировать гид в данной папке
+git config -- local user.name "Oralbek" - установить имя пользователя (вместо local можно сделать global)
+git config -- local user.email oralbek@gmail.com 
+git status - проверка статуса файлов
+
+git add -A - добавить все файлы в git
+git add . - добавить все файлы в git 
+git add index.html - добавить конкретный файл
+git add *.css - добавить все файлы оканчивающиеся на .css
+
+git commit -a -m"first commit" - контрольная точка
+
+git log - посмотреть все коммиты которые были
+
+git remote add origin https://github.com/Tleubaev/New-project.git   - подключить к github
+git branch -M main  - создать новую ветку
+git push -u origin main - запушить
