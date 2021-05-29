@@ -25,21 +25,41 @@
 // console.log(4 + +"6");  // получим 10
 
 
-let incr = 10,
-    decr = 10;
-incr++;
-decr--;
-++incr;
---decr;
-console.log(incr);
-console.log(decr);
+// let incr = 10,
+//     decr = 10;
+// incr++;
+// decr--;
+// ++incr;
+// --decr;
+// console.log(incr);
+// console.log(decr);
 
-console.log(5%2);
+// console.log(5%2);
 
-console.log(4*2 == '8');
-console.log(4*2 === '8');
+// console.log(4*2 == '8');
+// console.log(4*2 === '8');
 
-const isChecked = true,
-      isClose = false;
-console.log(isChecked && isClose);
-console.log(isChecked || isClose);
+// const isChecked = true,
+//       isClose = false;
+// console.log(isChecked && isClose);
+// console.log(isChecked || isClose);
+
+const numberOfFilms = +prompt("Сколько фильмов вы посмотрели?", 0);
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false   
+};
+
+const lastFilms = prompt("Один из последних просмотренных фильмов?", ''),
+      fimlsScore = +prompt("На сколько оцените его?", ''),
+      lastFilms2 = prompt("Один из последних просмотренных фильмов?", ''),
+      fimlsScore2 = +prompt("На сколько оцените его?", '');
+
+personalMovieDB.movies[lastFilms] = fimlsScore;
+personalMovieDB.movies[lastFilms2] = fimlsScore2;
+
+console.log(personalMovieDB);
