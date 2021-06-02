@@ -158,3 +158,51 @@ logg.substr(6, 3);          // вырезаем кусок, первое чис�
 Math.round(num);            // округляет число до ближайшего целого
 parseInt(test);             // превращает в число
 parseFloat(test);           // превращает в дробное число
+
+
+        Callback - функции
+function learnJS(lang, callback) {
+    console.log(`Я учу: ${lang}`);
+    callback();
+}
+function done() {
+    console.log("Я прошел первый урок");
+}
+learnJS("JavaScript", done);
+
+
+        Объекты
+const options = {                       // объект
+    name: "oralbek",
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: "black",
+        bg: "red"
+    },
+    makeTest: function() {
+        console.log("Test");
+    }
+};
+options.makeTest();                     // вызвать функцию из объекта
+
+const {border, bg} = options.colors;    // декструктуризация объекта
+console.log(border);
+
+delete options.name;                    // удалить из объекта свойство
+console.log(options);
+
+let counter = 0;
+for (let key in options) {
+    if (typeof(options[key]) === 'object') {
+        for (let i in options[key]) {
+            console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+            counter++;
+        }
+    } else {
+        console.log(`Свойство ${key} имеет значение ${options[key]}`);
+        counter++;
+    }
+}
+console.log(counter);                      // подсчитать количество объектов
+console.log(Object.keys(options).length);  // подсчитать количество объектов, правильный способ
