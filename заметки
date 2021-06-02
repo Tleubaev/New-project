@@ -1,8 +1,5 @@
 JavaScript
 
-console.log() - вызвать что либо в консоль
-alert() - вызвать всплывающее сообщение
-
 var - глобальное объявление переменной
 let - локальная перменная(её лучше использовать всегда)
 const - константа, не изменяемая переменная, но по сути её можно поменять
@@ -26,6 +23,14 @@ const - константа, не изменяемая переменная, но
     Объекты:
 1) Массивы - могут включать в себя разные типы данных
 let arr = ["Oralbek", "Merkhan", 99, 124.3, true, {}, [], "Nurtas"]; 
+Пример объекта:
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false   
+};
 
     Команды:
 alert(); - выводит окно с текстом
@@ -44,7 +49,7 @@ const url = "toys";
 console.log("https://someurl/" + url);
 
     Интерполяция, можно вызывать переменные через кавычки ``, 
-console.log(`https://someurl/${url}/5`);
+console.log(`${url}`);
 
     Инкримент, Декримент:
 incr++; - постфикстная форма 
@@ -60,3 +65,96 @@ decr--;
 && - оператор "и"
 || - оператор "или"
 != - не равно, !== - не равно по типу данных
+
+console.log() - вызвать что либо в консоль
+alert() - вызвать всплывающее сообщение
+console.dir(Number); - выводит элемент в виде объекта
+
+            Условие:
+    
+    if - сравнение
+const i = 50;
+if (i < 49) {
+    console.log('Error');
+} else if (i > 100) {
+    console.log('Mnogo');
+} else {
+    console.log('ok!');
+}
+    
+        Тернарный оператор - тоже самое что и if только короче, пишется через знак вопроса - "?"
+const b = 50;
+b == 50 ? console.log('true') : console.log('false');
+    
+        Switch - case
+const c = 50;
+switch(c) {
+    case 49: 
+        console.log('Неверно');
+        break;
+    case 100: 
+        console.log('Неверно');
+        break;
+    case 50: 
+        console.log('Верно');
+        break;
+    default: 
+        console.log('Не найдено');
+        break;
+}
+
+            Циклы:
+    While
+let a = 50
+while (a < 55) {
+    console.log(a);
+    a++;
+}
+    Do - while
+let x = 50
+do {
+    console.log(x);
+    x++;
+}
+while (x <= 55);
+    For
+for (let i = 1; i <= 10; i++) {
+    if (i === 6) {
+        break;          - прервать цикл
+        continue;       - пропустить шаг, и продожить цикл
+    }
+    console.log(i);
+}
+
+        Функции:
+    Declaration - функция
+function showFirstMessage(text) {
+    console.log(text);
+}
+showFirstMessage("Hello World!");
+    Expression - функция
+const logger = function() {
+    console.log("Oralbek");
+};
+logger();
+    Стрелочная функция
+const plus = (a, b) => a + b;   - первый вариант
+const plus2 = (a, b) => {return (2 + a + b - 5)};   - второй вариант
+const plus3 = (a, b) => {   - трейтий вариант
+    console.log(1);
+    return (a + b);
+};
+
+
+        Методы и свойства:
+str.length;                 // это свойство, оно пишется без скобочек
+str.toUpperCase();          // это функция, она пишется со скобочками
+str.toLowerCase();
+fruit.indexOf("fruit");     // покажет нумерацию, с которой начинается слово
+fruit.indexOf("q");         // покажет -1, т.к нет такого символа
+logg.slice(6, 11);          // вырежет кусок строки
+logg.substring(6, 11);      // тоже самое что и слайс
+logg.substr(6, 3);          // вырезаем кусок, первое число с откуда начинать, второе сколько вырезать
+Math.round(num);            // округляет число до ближайшего целого
+parseInt(test);             // превращает в число
+parseFloat(test);           // превращает в дробное число

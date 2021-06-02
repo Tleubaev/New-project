@@ -44,22 +44,131 @@
 // console.log(isChecked && isClose);
 // console.log(isChecked || isClose);
 
-const numberOfFilms = +prompt("Сколько фильмов вы посмотрели?", 0);
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false   
-};
 
-const lastFilms = prompt("Один из последних просмотренных фильмов?", ''),
-      fimlsScore = +prompt("На сколько оцените его?", ''),
-      lastFilms2 = prompt("Один из последних просмотренных фильмов?", ''),
-      fimlsScore2 = +prompt("На сколько оцените его?", '');
+// if (0) {
+//     console.log("true");
+// }
 
-personalMovieDB.movies[lastFilms] = fimlsScore;
-personalMovieDB.movies[lastFilms2] = fimlsScore2;
+// const a = 50;
+// if (a < 49) {
+//     console.log('Error');
+// } else if (a > 100) {
+//     console.log('Mnogo');
+// } else {
+//     console.log('ok!');
+// }
 
-console.log(personalMovieDB);
+// const b = 50;
+// b == 50 ? console.log('true') : console.log('false');
+
+
+
+// const c = 50;
+// switch(c) {
+//     case 49: 
+//         console.log('Неверно');
+//         break;
+//     case 100: 
+//         console.log('Неверно');
+//         break;
+//     case 50: 
+//         console.log('Верно');
+//         break;
+//     default: 
+//         console.log('Не найдено');
+//         break;
+// }
+
+
+
+// let z = 50
+// while (z <= 55) {
+//     console.log(z);
+//     z++;
+// }
+
+// let x = 50
+// do {
+//     console.log(x);
+//     x++;
+// }
+// while (x <= 55);
+
+// for (let i = 1; i <= 10; i++) {
+//     if (i === 6) {
+//         // break;
+//         continue;   // что бы код пропустил данный шаг
+//     }
+//     console.log(i);
+// }
+
+
+
+
+// let num = 20;
+
+// function showFirstMessage(text) {
+//     console.log(text);
+//     let num = 10;
+// }
+
+// showFirstMessage("Hello World!");
+// console.log(num);
+
+// function calc(a, b) {
+//     return (a + b);
+// }
+// console.log(calc(2, 3));
+// console.log(calc(5, 2));
+// console.log(calc(7, 1));
+
+// function ret() {
+//     let num = 50;
+//     return num;
+// }
+// let anotherNum = ret();
+// console.log(anotherNum);
+
+// const logger = function() {
+//     console.log("Oralbek");
+// };
+// logger();
+
+// const plus = (a, b) => a + b;
+// const plus2 = (a, b) => {return (2 + a + b - 5)};
+// const plus3 = (a, b) => {
+//     console.log(1);
+//     return (a + b);
+// };
+
+
+
+// const str = "test";
+// console.log(str.length);    // это свойство, оно пишется без скобочек
+// console.log(str[2]);
+// console.log(str.toUpperCase()); // это функция, она пишется со скобочками
+// console.log(str.toLowerCase());
+// console.log(str);
+
+// const fruit = "Some fruit";
+// console.log(fruit.indexOf("fruit"));    // покажет нумерацию, с которой начинается слово
+// console.log(fruit.indexOf("q"));    // покажет -1, т.к нет такого символа
+
+// const logg = "Hello world";
+// console.log(logg.slice(6, 11));     // вырежет кусок строки
+// console.log(logg.slice(6));
+// console.log(logg.slice(-5, -1));
+
+// console.log(logg.substring(6, 11));  // тоже самое что и слайс
+
+// console.log(logg.substr(6, 3));     // вырезаем кусок, первое число с откуда начинать, второе сколько вырезать
+
+// const num = 12.2;
+// console.log(Math.round(num));       // округляет число до ближайшего целого
+
+// const test = "12.2px";
+// console.log(parseInt(test));
+// console.log(parseFloat(test));
+
+
