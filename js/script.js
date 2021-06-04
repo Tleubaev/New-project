@@ -197,39 +197,77 @@
 
 
 
-const options = {
-    name: "oralbek",
-    width: 1024,
-    height: 1024,
-    colors: {
-        border: "black",
-        bg: "red"
-    },
-    makeTest: function() {
-        console.log("Test");
-    }
-};
-// console.log(options.name);
-// console.log(options['colors']['border']);
-options.makeTest();
+// const options = {
+//     name: "oralbek",
+//     width: 1024,
+//     height: 1024,
+//     colors: {
+//         border: "black",
+//         bg: "red"
+//     },
+//     makeTest: function() {
+//         console.log("Test");
+//     }
+// };
+// // console.log(options.name);
+// // console.log(options['colors']['border']);
+// options.makeTest();
 
-const {border, bg} = options.colors;
-console.log(border);
+// const {border, bg} = options.colors;
+// console.log(border);
 
-// delete options.name;
-// console.log(options);
+// // delete options.name;
+// // console.log(options);
 
-let counter = 0;
-for (let key in options) {
-    if (typeof(options[key]) === 'object') {
-        for (let i in options[key]) {
-            console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
-            counter++;
-        }
-    } else {
-        console.log(`Свойство ${key} имеет значение ${options[key]}`);
-        counter++;
-    }
-}
-console.log(counter);                      // подсчитать количество объектов
-console.log(Object.keys(options).length);  // количество объектов, правильный способ
+// let counter = 0;
+// for (let key in options) {
+//     if (typeof(options[key]) === 'object') {
+//         for (let i in options[key]) {
+//             console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+//             counter++;
+//         }
+//     } else {
+//         console.log(`Свойство ${key} имеет значение ${options[key]}`);
+//         counter++;
+//     }
+// }
+// console.log(counter);                      // подсчитать количество объектов
+// console.log(Object.keys(options).length);  // количество объектов, правильный способ
+
+
+
+
+// const arr = [1, 2, 4, 8, 16];
+
+// console.log(arr.length);        // берет индекс последнего элемента и добавляет +1
+
+// arr.pop();              // удаляет последний элемент в массиве
+// arr.push(-16);
+
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {      // перебор массива
+//     console.log(arr[i]);
+// }
+
+// for (let value of arr) {        // перебор массива другой способ
+//     console.log(value);
+// }
+
+// // forEach пробегает по каждому элементу, тоже перебор массива, самый правильный
+// // item - выступает в качестве этого элемента, i - номер по порядку, arr - название массива к которому обращаемся
+// arr.forEach(function(item, i, arr) {        
+//     console.log(`${i}: ${item} внутри массива ${arr}`);
+// });
+
+// const str = prompt("Qwerty", "");
+// const products = str.split(", ");       // разъединяет строки с разделителем
+// products.sort();
+// console.log(products.join("; "));      // соединяет(склеивает строку) через разделитель
+
+// const arr1 = [1, 28, 14, 8, 16];
+// console.log(arr1.sort(compareNum));
+
+// function compareNum(a, b) {
+//     return a - b;
+// }
