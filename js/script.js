@@ -271,3 +271,90 @@
 // function compareNum(a, b) {
 //     return a - b;
 // }
+
+
+
+let a = 5,
+    b = a;
+
+b = b + 5;
+
+console.log(b);
+console.log(a);
+
+const obj = {
+    a: 5,
+    b: 1
+};
+
+const copy = obj;       // тут передается Ссылка на объект, а не создается копия
+                        // т.е. модифируя копию, мы модифицируем наш изначальный объект
+// copy.a = 10;
+
+console.log(obj);
+console.log(copy);
+
+function copyObj(mainObj) {
+    let newObj = {};
+    for (let key in mainObj) {
+        newObj[key] = mainObj[key];
+    }
+    return newObj;
+}
+
+const numbers = {
+    a: 5,
+    b: 2,
+    c: {
+        x: 7,
+        y: 1
+    }
+};
+
+// const newNumbers = copyObj(numbers);
+// newNumbers.c.x = 99;
+// console.log(numbers);
+// console.log(newNumbers);
+
+const add = {
+    d: 16,
+    e: 32
+};
+
+console.log(Object.assign(numbers, add));   // добавляет объект в объект, сначала куда(numbers), потом что(add)
+
+const clone = Object.assign({}, add);       // {} - создает пустой объект, в который мы копируем данные из другого
+clone.d = 55;
+console.log(add);
+console.log(clone);
+
+const oldArray = ['a', 'b', 'c'];
+const newArray = oldArray.slice();      // создаёт копию массива
+newArray[0] = 'z';
+console.log(oldArray);
+console.log(newArray);
+
+const video = ['youtube', 'vimeo', 'aitube'],
+      blogs = ['instagram', 'tiktok', 'facebook'],
+      internet = ['vk', ...video, ...blogs, 'mail'];    // ... - оператор разворота, развертывает на отдельные элементы
+console.log(internet);
+
+function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+const stream = [7, 2, 0];
+log(...stream);                         // развернули массив, что бы функция приняла данные
+
+const array = ['a', 'b'];
+const newArray2 = [...array];           // способ скопировать массив с помощью оператора разворота
+console.log(newArray2);
+
+const q = {
+    one: 1,
+    two: 2
+};
+const x = {...q};                       // оператор разворота для клонирования объекта
+console.log(x);
+
