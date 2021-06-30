@@ -1,242 +1,5 @@
 "use strict";
 
-// alert("Hello");
-
-// const result = confirm("Are you here?");
-// console.log(result);
-
-// const salam = +prompt("Салам", "Уалейкум");
-// console.log(salam + 5);
-
-// const answers = [];
-// answers[0] = prompt("Как ваше имя?", '');
-// answers[1] = prompt("Сколько вам лет?", '');
-// answers[2] = prompt("Укажите ваш пол?", '');
-// console.log(typeof(answers));
-// console.log(typeof(null));
-
-// const url = "toys";
-// console.log("https://someurl/" + url); // канкатинация, т.к. соединение двух строк
-// console.log(`https://someurl/${url}/5`); // интерполяция, 
-
-// const name = "Oralbek";
-// alert(`Salam ${name}`);
-
-// console.log(4 + +"6");  // получим 10
-
-
-// let incr = 10,
-//     decr = 10;
-// incr++;
-// decr--;
-// ++incr;
-// --decr;
-// console.log(incr);
-// console.log(decr);
-
-// console.log(5%2);
-
-// console.log(4*2 == '8');
-// console.log(4*2 === '8');
-
-// const isChecked = true,
-//       isClose = false;
-// console.log(isChecked && isClose);
-// console.log(isChecked || isClose);
-
-
-
-// if (0) {
-//     console.log("true");
-// }
-
-// const a = 50;
-// if (a < 49) {
-//     console.log('Error');
-// } else if (a > 100) {
-//     console.log('Mnogo');
-// } else {
-//     console.log('ok!');
-// }
-
-// const b = 50;
-// b == 50 ? console.log('true') : console.log('false');
-
-
-
-// const c = 50;
-// switch(c) {
-//     case 49: 
-//         console.log('Неверно');
-//         break;
-//     case 100: 
-//         console.log('Неверно');
-//         break;
-//     case 50: 
-//         console.log('Верно');
-//         break;
-//     default: 
-//         console.log('Не найдено');
-//         break;
-// }
-
-
-
-// let z = 50
-// while (z <= 55) {
-//     console.log(z);
-//     z++;
-// }
-
-// let x = 50
-// do {
-//     console.log(x);
-//     x++;
-// }
-// while (x <= 55);
-
-// for (let i = 1; i <= 10; i++) {
-//     if (i === 6) {
-//         // break;
-//         continue;   // что бы код пропустил данный шаг
-//     }
-//     console.log(i);
-// }
-
-
-
-
-// let num = 20;
-
-// function showFirstMessage(text) {
-//     console.log(text);
-//     let num = 10;
-// }
-
-// showFirstMessage("Hello World!");
-// console.log(num);
-
-// function calc(a, b) {
-//     return (a + b);
-// }
-// console.log(calc(2, 3));
-// console.log(calc(5, 2));
-// console.log(calc(7, 1));
-
-// function ret() {
-//     let num = 50;
-//     return num;
-// }
-// let anotherNum = ret();
-// console.log(anotherNum);
-
-// const logger = function() {
-//     console.log("Oralbek");
-// };
-// logger();
-
-// const plus = (a, b) => a + b;
-// const plus2 = (a, b) => {return (2 + a + b - 5)};
-// const plus3 = (a, b) => {
-//     console.log(1);
-//     return (a + b);
-// };
-
-
-
-// const str = "test";
-// console.log(str.length);    // это свойство, оно пишется без скобочек
-// console.log(str[2]);
-// console.log(str.toUpperCase()); // это функция, она пишется со скобочками
-// console.log(str.toLowerCase());
-// console.log(str);
-
-// const fruit = "Some fruit";
-// console.log(fruit.indexOf("fruit"));    // покажет нумерацию, с которой начинается слово
-// console.log(fruit.indexOf("q"));    // покажет -1, т.к нет такого символа
-
-// const logg = "Hello world";
-// console.log(logg.slice(6, 11));     // вырежет кусок строки
-// console.log(logg.slice(6));
-// console.log(logg.slice(-5, -1));
-
-// console.log(logg.substring(6, 11));  // тоже самое что и слайс
-
-// console.log(logg.substr(6, 3));     // вырезаем кусок, первое число с откуда начинать, второе сколько вырезать
-
-// const num = 12.2;
-// console.log(Math.round(num));       // округляет число до ближайшего целого
-
-// const test = "12.2px";
-// console.log(parseInt(test));
-// console.log(parseFloat(test));
-
-
-
-// function first() {
-//     // Do something
-//     setTimeout(function() {
-//         console.log(1);
-//     }, 500);
-// }
-// function second() {
-//     console.log(2);
-// }
-// first();
-// second();
-
-// // callback function
-// function learnJS(lang, callback) {
-//     console.log(`Я учу: ${lang}`);
-//     callback();
-// }
-// function done() {
-//     console.log("Я прошел первый урок");
-// }
-// learnJS("JavaScript", done);
-
-
-
-// const options = {
-//     name: "oralbek",
-//     width: 1024,
-//     height: 1024,
-//     colors: {
-//         border: "black",
-//         bg: "red"
-//     },
-//     makeTest: function() {
-//         console.log("Test");
-//     }
-// };
-// // console.log(options.name);
-// // console.log(options['colors']['border']);
-// options.makeTest();
-
-// const {border, bg} = options.colors;
-// console.log(border);
-
-// // delete options.name;
-// // console.log(options);
-
-// let counter = 0;
-// for (let key in options) {
-//     if (typeof(options[key]) === 'object') {
-//         for (let i in options[key]) {
-//             console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
-//             counter++;
-//         }
-//     } else {
-//         console.log(`Свойство ${key} имеет значение ${options[key]}`);
-//         counter++;
-//     }
-// }
-// console.log(counter);                      // подсчитать количество объектов
-// console.log(Object.keys(options).length);  // количество объектов, правильный способ
-
-
-
-
 // const arr = [1, 2, 4, 8, 16];
 
 // console.log(arr.length);        // берет индекс последнего элемента и добавляет +1
@@ -387,6 +150,82 @@
 
 // console.log(jonh.armor);        // Джон получил броню
 // jonh.sayHello();                // Джон получил голос
+
+
+
+// // To String
+
+// // 1) 
+// console.log(typeof(String(null)));      // null - теперь string
+// console.log(typeof(String(4)));         // String меняет тип объекта на стринг
+// // 2)
+// console.log(typeof(undefined + ''));    // канкатинация, сложение чего то со строкой, с помощью кавычек
+
+// const num = 5;
+// console.log("https://vk.com/catalog/" + num);
+// const fontSize = 26 + "px";
+
+// // To Number
+
+// // 1)
+// console.log(typeof(Number('5')));
+// // 2)
+// console.log(typeof(+'5'));          // унарный плюс
+// // 3)
+// console.log(typeof(parseInt("15px", 10)));      // первое - что нужно перевести в число, второе - десятичная система
+
+// let answer = +prompt("Hello", "");
+
+// // To Boolean
+
+// // 1)
+// // 0, '', null, undefined, NaN; = false
+// let switcher = null;
+// if (switcher) {
+//     console.log('Working...');      // не стработает, т.к. null - это false
+// }
+// // 2)
+// console.log(typeof(Boolean('4')));  // вернёт boolean
+// // 3)
+// console.log(typeof(!!'4'));         // вернёт boolean       
+
+
+
+// let x = 5;
+// console.log(x++);   // 5
+// console.log(++x);   // 6
+
+// console.log([] + false - null + true);      // NaN
+
+// let y = 1;
+// let x = y = 2;
+// console.log(x);     // 2
+
+// console.log([] + 1 + 2);    // 12, массив превращает в строку 
+
+// alert( "1"[0] );    // 1, первое знак в массиве, идёт по строкам первый знак
+
+// console.log(2 && 1 && null && 0 && undefined);  // null, 
+// // И && - запинается на лжи
+// // ИЛИ || - запинается на правде
+
+// console.log(!!(1 && 2) === (1 && 2));   // false, т.к. !! - даёт булиновое значение
+ 
+// console.log(null || 2 && 3 || 4);  // 3
+// // 2 И 3 - выбирается последнее, так как оба трушные, = 3
+// // null || 3 - выбирается 3, т.к. он трушный
+// // 3 || 4 - оператор ИЛИ запинается на правде, первая правда была 3
+
+// let a = [1, 2, 3];
+// let b = [1, 2, 3];
+// console.log(a == b);    // false, т.к.  хоть и переменные имеют одинаковую начинку, они не являются равными
+
+// console.log(typeof(+"Infinity"));   // Infinity - но тип данных будет число
+
+// console.log("Ёжик" > "яблоко");     // false, сравниваются первые символы, нужно смотреть через UNI код
+// // Ё - имеет цифру 402, я - 449, "я" больше чем "Ё"
+
+// console.log(0 || "" || 2 || undefined || true || false);    // 2
 
 
 
